@@ -21,9 +21,8 @@ $ npm start
 
 ## Project Status
 ### Features
-No one yet.
-### Todo
 * Render List
+### Todo
 * Add CRUD
 * Apply TDD
 * Connect Client to Sever
