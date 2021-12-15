@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TodoItem } from '../TodoItem/index';
 
 export const TodoList = function TodoList({ todos }) {
   return (
@@ -7,10 +8,7 @@ export const TodoList = function TodoList({ todos }) {
       <h1>TODO LIST</h1>
       <ul>
         {todos.map((todo) => (
-          <li>
-            {todo.completed}
-            {todo.task}
-          </li>
+          <TodoItem todo={todo} />
         ))}
       </ul>
     </>
