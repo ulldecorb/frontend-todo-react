@@ -1,27 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { PropTypes } from 'prop-types';
 
-export const TodoItem = function TodoItem({ todo }) {
-  const { task, completed } = todo;
+export const TodoItem = function TodoItem({ data, handleDeleteTask }) {
+  const { id, task, completed } = data;
   return (
-    <li>
-      <input type="checkbox" name="completed" checked={completed} />
-      {task}
-    </li>
-  // <button type="button" onclick={deleteTask(id)}>Delete</button>
+    <>
+      <span>
+        <input type="checkbox" name="completed" checked={completed} />
+        {task}
+      </span>
+      <button type="button" onClick={(e) => handleDeleteTask(e, id)}>Delete</button>
+    </>
   );
 };
 
-// TodoItem.propTypes = {
-//   todo: PropTypes.shape({}).isRequied
-// };
-
 TodoItem.propTypes = {
-  todo: PropTypes.shape({
+  data: PropTypes.shape({
     task: String,
-    id: String,
+    id: Number,
     completed: Boolean
-  }).isRequired
+  }).isRequired,
+  handleDeleteTask: PropTypes.func.isRequired
 };
 
 export default TodoItem;
