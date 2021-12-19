@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TodoItem } from '../TodoItem';
 
-export const TodoList = function TodoList({ todos, handleDeleteTask, toggleTodoCheck }) {
+export const TodoList = function TodoList({
+  todos, handleDeleteTask, toggleTodoCheck, handleUpdateTask
+}) {
   return (
     <>
       <h1>TODO LIST</h1>
@@ -10,20 +12,27 @@ export const TodoList = function TodoList({ todos, handleDeleteTask, toggleTodoC
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
-            data={todo}
+            todo={todo}
             handleDeleteTask={handleDeleteTask}
             toggleTodoCheck={toggleTodoCheck}
+            handleUpdateTask={handleUpdateTask}
           />
         ))}
       </ul>
+      <span>
+        { todos.filter((todo) => !todo.completed).length > 0
+          ? `There are still ${todos.filter((todo) => !todo.completed).length} tasks to do`
+          : 'God Job!'}
+      </span>
     </>
   );
 };
 
 TodoList.propTypes = {
-  todos: PropTypes.shape([{}]).isRequired,
+  todos: PropTypes.shape([]).isRequired,
   handleDeleteTask: PropTypes.func.isRequired,
-  toggleTodoCheck: PropTypes.func.isRequired
+  toggleTodoCheck: PropTypes.func.isRequired,
+  handleUpdateTask: PropTypes.func.isRequired
 };
 
 export default TodoList;
