@@ -10,8 +10,8 @@ export const App = function App() {
 
   const toggleTodoCheck = (id) => {
     const newTodos = [...todos];
-    const todo = newTodos.find((task) => task.id === id);
-    todo.completed = !todo.completed;
+    const newTodo = newTodos.find((todo) => todo.id === id);
+    newTodo.completed = !newTodo.completed;
     setTodos(newTodos);
   };
 
@@ -20,8 +20,7 @@ export const App = function App() {
   // };
   // onChange={handleInput}
 
-  const handleDeleteTask = (event, id) => {
-    event.preventDefault();
+  const handleDeleteTask = (id) => {
     const newTodos = todos.filter((task) => task.id !== id);
     setTodos(newTodos);
   };
@@ -35,8 +34,17 @@ export const App = function App() {
     newTaskRef.current.value = null;
   };
 
+  const handleUpdateTask = (id, task) => {
+    if (task !== '') {
+      const newTodos = [...todos];
+      const newTodo = newTodos.find((todo) => todo.id === id);
+      newTodo.task = task;
+      setTodos(newTodos);
+    }
+  };
+
   const handleResetList = () => {
-    const newTodos = [...todos].filter((todo) => todo.completed === false);
+    const newTodos = todos.filter((todo) => !todo.completed);
     setTodos(newTodos);
   };
 
@@ -46,6 +54,7 @@ export const App = function App() {
         todos={todos}
         handleDeleteTask={handleDeleteTask}
         toggleTodoCheck={toggleTodoCheck}
+        handleUpdateTask={handleUpdateTask}
       />
       <input
         type="text"
