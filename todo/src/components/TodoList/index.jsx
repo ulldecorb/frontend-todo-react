@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TodoItem } from '../TodoItem';
 
 export const TodoList = function TodoList({
-  todos, handleDeleteTask, toggleTodoCheck, handleUpdateTask
+  todos, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask
 }) {
   return (
     <>
@@ -14,14 +14,14 @@ export const TodoList = function TodoList({
             key={todo.id}
             todo={todo}
             handleDeleteTask={handleDeleteTask}
-            toggleTodoCheck={toggleTodoCheck}
+            handleToggleTodoCheck={handleToggleTodoCheck}
             handleUpdateTask={handleUpdateTask}
           />
         ))}
       </ul>
       <span>
         { todos.filter((todo) => !todo.completed).length > 0
-          ? `There are still ${todos.filter((todo) => !todo.completed).length} tasks to do`
+          ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
           : 'God Job!'}
       </span>
     </>
@@ -31,7 +31,7 @@ export const TodoList = function TodoList({
 TodoList.propTypes = {
   todos: PropTypes.shape([]).isRequired,
   handleDeleteTask: PropTypes.func.isRequired,
-  toggleTodoCheck: PropTypes.func.isRequired,
+  handleToggleTodoCheck: PropTypes.func.isRequired,
   handleUpdateTask: PropTypes.func.isRequired
 };
 
