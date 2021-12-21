@@ -2,14 +2,14 @@ import React, { useRef } from 'react';
 import { PropTypes } from 'prop-types';
 
 export const TodoItem = function TodoItem({
-  todo, handleDeleteTask, toggleTodoCheck, handleUpdateTask
+  todo, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask
 }) {
   const { id, task, completed } = todo;
 
   const updateTaskRef = useRef();
 
-  const handleCheckClick = () => {
-    toggleTodoCheck(id);
+  const handleToggleTodoCheckClick = () => {
+    handleToggleTodoCheck(id);
   };
 
   const handleUpdateTaskClick = () => {
@@ -23,7 +23,7 @@ export const TodoItem = function TodoItem({
 
   return (
     <li>
-      <input type="checkbox" name="completed" checked={completed} onChange={handleCheckClick} />
+      <input type="checkbox" data-testid="checkboxInput" name="completed" checked={completed} onChange={handleToggleTodoCheckClick} />
       {task}
       <input ref={updateTaskRef} placeholder={task} type="text" name={task} />
       <button type="button" onClick={() => handleUpdateTaskClick()}>UPDATE</button>
@@ -33,14 +33,15 @@ export const TodoItem = function TodoItem({
 };
 
 TodoItem.propTypes = {
+  // todo: PropTypes.objectOf(PropTypes.object).isRequired,
   todo: PropTypes.shape({
-    task: String,
-    id: Number,
-    completed: Boolean
+    task: PropTypes.string,
+    id: PropTypes.number,
+    completed: PropTypes.bool
   }).isRequired,
-  handleDeleteTask: PropTypes.func.isRequired,
-  toggleTodoCheck: PropTypes.func.isRequired,
-  handleUpdateTask: PropTypes.func.isRequired
+  handleDeleteTask: PropTypes.PropTypes.func.isRequired,
+  handleToggleTodoCheck: PropTypes.PropTypes.func.isRequired,
+  handleUpdateTask: PropTypes.PropTypes.func.isRequired
 };
 
 export default TodoItem;

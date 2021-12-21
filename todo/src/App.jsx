@@ -4,21 +4,15 @@ import List from './constants/List';
 
 export const App = function App() {
   const [todos, setTodos] = useState([...List]);
-  // const [newTask, setNewTask] = useState('');
 
   const newTaskRef = useRef();
 
-  const toggleTodoCheck = (id) => {
+  const handleToggleTodoCheck = (id) => {
     const newTodos = [...todos];
     const newTodo = newTodos.find((todo) => todo.id === id);
     newTodo.completed = !newTodo.completed;
     setTodos(newTodos);
   };
-
-  // const handleInput = (event) => {
-  //   setNewTask(event.target.value);
-  // };
-  // onChange={handleInput}
 
   const handleDeleteTask = (id) => {
     const newTodos = todos.filter((task) => task.id !== id);
@@ -53,7 +47,7 @@ export const App = function App() {
       <TodoList
         todos={todos}
         handleDeleteTask={handleDeleteTask}
-        toggleTodoCheck={toggleTodoCheck}
+        handleToggleTodoCheck={handleToggleTodoCheck}
         handleUpdateTask={handleUpdateTask}
       />
       <input
