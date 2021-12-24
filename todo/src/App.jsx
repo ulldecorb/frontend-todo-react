@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { TodoList } from './components/TodoList';
 import List from './constants/List';
+import './style/app.css';
 
 export const App = function App() {
   const [todos, setTodos] = useState([...List]);
@@ -43,22 +44,26 @@ export const App = function App() {
   };
 
   return (
-    <section>
+    <section className="list">
+      <h1 className="list__title">TODO LIST</h1>
       <TodoList
+        className="list__box"
         todos={todos}
         handleDeleteTask={handleDeleteTask}
         handleToggleTodoCheck={handleToggleTodoCheck}
         handleUpdateTask={handleUpdateTask}
       />
-      <input
-        type="text"
-        placeholder="Write new task"
-        name="addtask"
-        id="addtask"
-        ref={newTaskRef}
-      />
-      <button type="button" onClick={() => handleCreateNewTask()}>ADD TASK</button>
-      <button type="button" onClick={() => handleResetList()}>RESET</button>
+      <section className="list__controls">
+        <input
+          type="text"
+          placeholder="Write new task"
+          name="addtask"
+          id="addtask"
+          ref={newTaskRef}
+        />
+        <button type="button" onClick={() => handleCreateNewTask()}>ADD TASK</button>
+        <button type="button" onClick={() => handleResetList()}>RESET</button>
+      </section>
     </section>
   );
 };
