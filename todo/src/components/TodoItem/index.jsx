@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { PropTypes } from 'prop-types';
-import './todoItem.css';
+import '../../style/todoItem.css';
 
 export const TodoItem = function TodoItem({
   todo, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask
@@ -23,7 +23,7 @@ export const TodoItem = function TodoItem({
   };
 
   return (
-    <li className={completed && 'completed'}>
+    <li className="task">
       <input
         type="checkbox"
         data-testid="checkboxInput"
@@ -31,7 +31,7 @@ export const TodoItem = function TodoItem({
         checked={completed}
         onChange={handleToggleTodoCheckClick}
       />
-      <p>{task}</p>
+      <p className={completed && 'completed'}>{task}</p>
       <input ref={updateTaskRef} placeholder={task} type="text" name={task} />
       <button type="button" onClick={() => handleUpdateTaskClick()}>UPDATE</button>
       <button type="button" onClick={() => handleDeleteTaskClick()}>Delete</button>

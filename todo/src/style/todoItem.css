@@ -1,0 +1,41 @@
+.completed {
+  text-decoration: line-through;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: chartreuse;
+}
+
+.task input {
+  color: yellowgreen;
+}
+
+.task input[type="checkout"] {
+  background-color: red;
+}
+
+.task input[type="text"] {
+  display: none;
+  opacity: 0;
+}
+
+.task button {
+  color: #FFF;
+  background-color: cadetblue;
+  border-radius: 1vh;
+}
+
+.task:nth-child(4) {
+  display: none;
+}
+
+.task button:last-child {
+  background-color: red;
+}
+/*# sourceMappingURL=todoItem.css.map */
