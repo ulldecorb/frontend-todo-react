@@ -22,7 +22,7 @@ $ npm start
 ## Project Status
 ### Features
 * Render List
-### Todo
 * Add CRUD
+### Todo
 * Add style
 <!-- * Connect Client to Sever -->
