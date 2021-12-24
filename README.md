@@ -2,12 +2,12 @@
 # Todo Fullstack
 
 ## Current
-This fullstack project is a TODO list with complete CRUD on React as Frontend framework and Node.js powered by Exppress on Backend.
+This fullstack project is a TODO list with complete CRUD on React as Frontend framework.
 	
 ## Technologies applyed
 Project is created with:
-* React version: 11.2.7
-* Eslint version: 7.30.0
+* React version: 17.0.2
+* Eslint version: 7.32.0
 * Jest version: 5.14.1
 	
 ## Setup / How to use?
@@ -24,5 +24,5 @@ $ npm start
 * Render List
 ### Todo
 * Add CRUD
-* Apply TDD
-* Connect Client to Sever
+* Add style
+<!-- * Connect Client to Sever -->
