@@ -5,17 +5,6 @@ import { render } from '@testing-library/react';
 import { TodoList } from './index';
 
 describe('when todolist component render', () => {
-  test('Title must display', () => {
-    const mockHandler = jest.fn();
-    const component = render(<TodoList
-      todos={[]}
-      handleDeleteTask={mockHandler}
-      handleUpdateTask={mockHandler}
-      handleToggleTodoCheck={mockHandler}
-    />);
-    component.getByText(/TODO LIST/i);
-  });
-
   test('Empty list must display text', () => {
     const mockTodos = [];
     const mockHandler = jest.fn();

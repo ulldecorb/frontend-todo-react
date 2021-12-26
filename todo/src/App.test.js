@@ -1,17 +1,25 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { App } from './App';
 
 describe('When app component render', () => {
   test('Click add button calls event handler once', () => {
+    const mockHandler = jest.fn();
     const component = render(<App />);
-    component.getByText(/add task/i);
+    const addTaskHandle = component.getByText(/add task/i);
+    addTaskHandle.onclick = mockHandler;
+    fireEvent.click(addTaskHandle);
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   });
 
   test('Click reset button calls event handler once', () => {
+    const mockHandler = jest.fn();
     const component = render(<App />);
-    component.getByText(/reset/i);
+    const addTaskHandle = component.getByText(/reset/i);
+    addTaskHandle.onclick = mockHandler;
+    fireEvent.click(addTaskHandle);
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   });
 });
