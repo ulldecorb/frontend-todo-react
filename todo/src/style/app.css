@@ -2,6 +2,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  font-family: 'Roboto Condensed', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,12 +17,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  background-color: #000;
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+  background-color: #dddddd;
 }
 
 .list {
-  width: 60vh;
+  width: 60vw;
   height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -33,36 +33,40 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #000;
+  border-radius: 2vw;
 }
 
 .list__title {
-  color: red;
-  font-size: 2em;
+  color: #f1b150;
+  font-family: 'Pushster', cursive;
+  font-size: 3em;
   text-align: center;
-}
-
-.list__box {
-  background-color: rgba(243, 238, 219, 0.5);
-  border-radius: 2vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  letter-spacing: 1.2vw;
 }
 
 .list__controls {
+  width: 60vw;
+}
+
+.list__controls .controls {
   margin-top: 1.5vh;
 }
 
-.list__controls input {
+.list__controls .controls__add-task-box {
+  width: 60vh;
+}
+
+.list__controls .controls__add-task-box .add-task-box__input {
   color: red;
   /* color for user input */
 }
 
-.list__controls [placeholder] {
+.list__controls .controls__add-task-box .add-task-box [placeholder] {
   color: blue;
 }
 
-.list__controls button {
+.list__controls .controls__add-task-box .add-task-box__handle-button {
   color: #FFF;
   background-color: cadetblue;
   border-radius: 1vh;

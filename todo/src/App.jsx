@@ -47,22 +47,35 @@ export const App = function App() {
     <section className="list">
       <h1 className="list__title">TODO LIST</h1>
       <TodoList
-        className="list__box"
         todos={todos}
         handleDeleteTask={handleDeleteTask}
         handleToggleTodoCheck={handleToggleTodoCheck}
         handleUpdateTask={handleUpdateTask}
       />
       <section className="list__controls">
-        <input
-          type="text"
-          placeholder="Write new task"
-          name="addtask"
-          id="addtask"
-          ref={newTaskRef}
-        />
-        <button type="button" onClick={() => handleCreateNewTask()}>ADD TASK</button>
-        <button type="button" onClick={() => handleResetList()}>RESET</button>
+        <div className="controls__add-task-box">
+          <input
+            type="text"
+            placeholder="Write new task"
+            name="addtask"
+            id="addtask"
+            ref={newTaskRef}
+            className="add-task-box__input"
+          />
+          <button
+            type="button"
+            onClick={() => handleCreateNewTask()}
+            className="add-task-box__handle-button"
+          >
+            ADD TASK
+          </button>
+        </div>
+        <button
+          type="button"
+          onClick={() => handleResetList()}
+        >
+          RESET
+        </button>
       </section>
     </section>
   );
