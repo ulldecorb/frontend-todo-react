@@ -1,4 +1,8 @@
-ul, span {
+.list__box {
   background-color: #7aa12b;
+}
+
+span {
+  color: red;
 }
 /*# sourceMappingURL=todoList.css.map */

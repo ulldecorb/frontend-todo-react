@@ -2,60 +2,71 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
+    font-family: 'Roboto Condensed', sans-serif;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    background-color: #000;
-    background-image: 
-    repeating-linear-gradient(90deg, transparent, transparent 50px,
-        rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px,
-        rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px,
-        rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
-    repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px,
-        rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px,
-        rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px,
-        rgba(255, 206, 0, 0.25) 166px),
-    repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
-        rgba(143, 77, 63, 0.25) 10px),
-    repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
-        rgba(143, 77, 63, 0.25) 10px);
+    background-color: rgb(221, 221, 221);
+    // background-image: 
+    // repeating-linear-gradient(90deg, transparent, transparent 50px,
+    //     rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px,
+    //     rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px,
+    //     rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+    // repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px,
+    //     rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px,
+    //     rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px,
+    //     rgba(255, 206, 0, 0.25) 166px),
+    // repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
+    //     rgba(143, 77, 63, 0.25) 10px),
+    // repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
+    //     rgba(143, 77, 63, 0.25) 10px);
 }
 
 .list {
-    width: 60vh;
+    width: 60vw;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #000;
+    border-radius: 2vw;
 
     &__title {
-        color: red;
-        font-size: 2em;
+        color: rgb(241, 177, 80);
+        font-family: 'Pushster', cursive;
+        font-size: 3em;
         text-align: center;
-    }
-
-    &__box {
-        background-color: rgba(243, 238, 219, 0.5);
-        border-radius: 2vh;
-        display: flex;
+        letter-spacing: 1.2vw;
     }
 
     &__controls {
-        margin-top: 1.5vh;
+        width: 60vw;
 
-        input {
-            color: red;  /* color for user input */
-
-        }
-        [placeholder] {
-            color: blue;
-        }
-        button {
-            color: #FFF;
-            background-color: cadetblue;
-            border-radius: 1vh;
+        .controls {
+            margin-top: 1.5vh;
+            
+            &__add-task-box {
+                width: 60vh;
+                
+                .add-task-box {
+                    
+                    
+                    &__input {
+                        color: red;  /* color for user input */
+                        
+                    }
+                    [placeholder] {
+                        color: blue;
+                    }
+                    &__handle-button {
+                        color: #FFF;
+                        background-color: cadetblue;
+                        border-radius: 1vh;
+                    }
+                }
+            }
         }
     }
 }

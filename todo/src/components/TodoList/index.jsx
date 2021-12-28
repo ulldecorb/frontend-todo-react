@@ -16,6 +16,7 @@ export const TodoList = function TodoList({
             handleDeleteTask={handleDeleteTask}
             handleToggleTodoCheck={handleToggleTodoCheck}
             handleUpdateTask={handleUpdateTask}
+            className="list__box"
           />
         ))}
       </ul>
