@@ -33,16 +33,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000;
+  background-color: #eeeeee;
   border-radius: 2vw;
 }
 
 .list__title {
-  color: #f1b150;
+  color: white;
   font-family: 'Pushster', cursive;
   font-size: 3em;
   text-align: center;
   letter-spacing: 1.2vw;
+  text-shadow: 0 0 10px #adadad;
 }
 
 .list__controls {

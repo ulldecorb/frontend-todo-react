@@ -33,8 +33,18 @@ export const TodoItem = function TodoItem({
       />
       <p className={completed && 'completed'}>{task}</p>
       <input ref={updateTaskRef} placeholder={task} type="text" name={task} />
-      <button type="button" onClick={() => handleUpdateTaskClick()}>UPDATE</button>
-      <button type="button" onClick={() => handleDeleteTaskClick()}>Delete</button>
+      <button
+        type="button"
+        onClick={() => handleUpdateTaskClick()}
+      >
+        UPDATE
+      </button>
+      <button
+        type="button"
+        onClick={() => handleDeleteTaskClick()}
+      >
+        Delete
+      </button>
     </li>
   );
 };
