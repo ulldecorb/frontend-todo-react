@@ -28,6 +28,7 @@ export const TodoItem = function TodoItem({
         type="checkbox"
         data-testid="checkboxInput"
         name="completed"
+        className="task__checkbox"
         checked={completed}
         onChange={handleToggleTodoCheckClick}
       />
@@ -35,12 +36,14 @@ export const TodoItem = function TodoItem({
       <input ref={updateTaskRef} placeholder={task} type="text" name={task} />
       <button
         type="button"
+        className="task__update-button"
         onClick={() => handleUpdateTaskClick()}
       >
         UPDATE
       </button>
       <button
         type="button"
+        className="task__delete-button"
         onClick={() => handleDeleteTaskClick()}
       >
         Delete

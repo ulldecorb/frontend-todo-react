@@ -8,7 +8,7 @@ export const TodoList = function TodoList({
 }) {
   return (
     <>
-      <ul>
+      <ul className="list__box">
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
@@ -16,7 +16,6 @@ export const TodoList = function TodoList({
             handleDeleteTask={handleDeleteTask}
             handleToggleTodoCheck={handleToggleTodoCheck}
             handleUpdateTask={handleUpdateTask}
-            className="list__box"
           />
         ))}
       </ul>

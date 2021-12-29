@@ -11,6 +11,7 @@
 }
 
 .task {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,8 +27,14 @@
   color: yellowgreen;
 }
 
-.task input[type="checkout"] {
-  background-color: red;
+.task__checkbox {
+  margin: 0 1vw;
+  cursor: pointer;
+  width: 10%;
+}
+
+.task__checkbox:hover {
+  outline: 0.4vw solid yellow;
 }
 
 .task input[type="text"] {
@@ -37,15 +44,27 @@
 
 .task button {
   color: #FFF;
-  background-color: cadetblue;
   border-radius: 1vh;
+  margin: 0 1vw;
+  cursor: pointer;
 }
 
-.task:nth-child(4) {
+.task button:hover {
+  outline: 0.4vw solid yellow;
+}
+
+.task p {
+  color: #5c5c5c;
+  cursor: pointer;
+  width: 80%;
+}
+
+.task__update-button {
   display: none;
 }
 
-.task button:last-child {
+.task__delete-button {
   background-color: red;
+  width: 10%;
 }
 /*# sourceMappingURL=todoItem.css.map */
