@@ -2,6 +2,14 @@
   text-decoration: line-through;
 }
 
+.task:nth-child(odd) {
+  background-color: #e1e9da;
+}
+
+.task:nth-child(even) {
+  background-color: #b8bdb4;
+}
+
 .task {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,7 +17,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: chartreuse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .task input {

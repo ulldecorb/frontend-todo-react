@@ -30,15 +30,16 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #000;
+    background-color: rgb(238, 238, 238);
     border-radius: 2vw;
 
     &__title {
-        color: rgb(241, 177, 80);
+        color: rgb(255, 255, 255);
         font-family: 'Pushster', cursive;
         font-size: 3em;
         text-align: center;
         letter-spacing: 1.2vw;
+        text-shadow: 0 0 10px rgb(173, 173, 173);
     }
 
     &__controls {
