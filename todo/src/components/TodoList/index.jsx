@@ -7,24 +7,17 @@ export const TodoList = function TodoList({
   todos, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask
 }) {
   return (
-    <>
-      <ul className="list__box">
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            handleDeleteTask={handleDeleteTask}
-            handleToggleTodoCheck={handleToggleTodoCheck}
-            handleUpdateTask={handleUpdateTask}
-          />
-        ))}
-      </ul>
-      <span>
-        { todos.filter((todo) => !todo.completed).length > 0
-          ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
-          : 'God Job!'}
-      </span>
-    </>
+    <ul className="list__box">
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          handleDeleteTask={handleDeleteTask}
+          handleToggleTodoCheck={handleToggleTodoCheck}
+          handleUpdateTask={handleUpdateTask}
+        />
+      ))}
+    </ul>
   );
 };
 

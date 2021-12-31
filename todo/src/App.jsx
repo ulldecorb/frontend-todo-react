@@ -53,6 +53,20 @@ export const App = function App() {
         handleUpdateTask={handleUpdateTask}
       />
       <section className="list__controls">
+        <div className="controls__info">
+
+          <span>
+            { todos.filter((todo) => !todo.completed).length > 0
+              ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
+              : 'God Job!'}
+          </span>
+          <button
+            type="button"
+            onClick={() => handleResetList()}
+          >
+            RESET
+          </button>
+        </div>
         <div className="controls__add-task-box">
           <input
             type="text"
@@ -61,21 +75,16 @@ export const App = function App() {
             id="addtask"
             ref={newTaskRef}
             className="add-task-box__input"
+            autoComplete="off"
           />
           <button
             type="button"
             onClick={() => handleCreateNewTask()}
-            className="add-task-box__handle-button"
+            className="add-task-box__handle-add-button"
           >
             ADD TASK
           </button>
         </div>
-        <button
-          type="button"
-          onClick={() => handleResetList()}
-        >
-          RESET
-        </button>
       </section>
     </section>
   );

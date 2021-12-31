@@ -44,30 +44,43 @@ body {
 
     &__controls {
         width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        .controls {
-            margin-top: 1.5vh;
+        .controls__add-task-box {
+            margin-top: 1.5vh;            
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
-            &__add-task-box {
-                width: 60vh;
-                
-                .add-task-box {
-                    
-                    
-                    &__input {
-                        color: red;  /* color for user input */
-                        
+            .add-task-box {
+                                
+                &__input {
+                    color: red;  /* color for user input */
+                    width: 60%;
+                    &::placeholder {
+                        color: rgb(172, 172, 172);
                     }
-                    [placeholder] {
-                        color: blue;
-                    }
-                    &__handle-button {
-                        color: #FFF;
-                        background-color: cadetblue;
-                        border-radius: 1vh;
+
+                    &:focus {
+                        outline:2px solid rgb(136, 136, 136)
                     }
                 }
+                
+                &__handle-add-button {
+                    color: #FFF;
+                    background-color: rgb(172, 172, 172);
+                    border-radius: 1vh;
+                }
             }
+        }
+
+        .controls__info {
+            width: 100%;
+            text-align: center;
         }
     }
 }
