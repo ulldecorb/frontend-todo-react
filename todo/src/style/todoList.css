@@ -1,4 +1,10 @@
+.list__box {
+  background-color: #cacaca;
+}
+
 span {
   color: red;
+  text-align: center;
+  width: 100%;
 }
 /*# sourceMappingURL=todoList.css.map */

@@ -48,28 +48,69 @@ body {
 
 .list__controls {
   width: 60vw;
-}
-
-.list__controls .controls {
-  margin-top: 1.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .list__controls .controls__add-task-box {
-  width: 60vh;
+  margin-top: 1.5vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .list__controls .controls__add-task-box .add-task-box__input {
   color: red;
   /* color for user input */
+  width: 60%;
 }
 
-.list__controls .controls__add-task-box .add-task-box [placeholder] {
-  color: blue;
+.list__controls .controls__add-task-box .add-task-box__input::-webkit-input-placeholder {
+  color: #acacac;
 }
 
-.list__controls .controls__add-task-box .add-task-box__handle-button {
+.list__controls .controls__add-task-box .add-task-box__input:-ms-input-placeholder {
+  color: #acacac;
+}
+
+.list__controls .controls__add-task-box .add-task-box__input::-ms-input-placeholder {
+  color: #acacac;
+}
+
+.list__controls .controls__add-task-box .add-task-box__input::placeholder {
+  color: #acacac;
+}
+
+.list__controls .controls__add-task-box .add-task-box__input:focus {
+  outline: 2px solid #888888;
+}
+
+.list__controls .controls__add-task-box .add-task-box__handle-add-button {
   color: #FFF;
-  background-color: cadetblue;
+  background-color: #acacac;
   border-radius: 1vh;
+}
+
+.list__controls .controls__info {
+  width: 100%;
+  text-align: center;
 }
 /*# sourceMappingURL=app.css.map */
