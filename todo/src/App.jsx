@@ -5,10 +5,7 @@ import List from './constants/List';
 import './style/app.css';
 
 export const App = function App() {
-  const hola = 'puta mare';
   const [todos, setTodos] = useState([...List]);
-  const [test, setTest] = useState(hola);
-
   const newTaskRef = useRef();
 
   const handleToggleTodoCheck = (id) => {
@@ -24,13 +21,12 @@ export const App = function App() {
   };
 
   const handleCreateNewTask = () => {
-    // const newId = todos.length !== 0 ? todos[todos.length - 1].id + 1 : 0;
     const newId = randomNewId();
     const newTask = newTaskRef.current.value;
     const newTodo = { id: newId, task: newTask, completed: false };
     const newTodos = [...todos, newTodo];
     setTodos(newTodos);
-    // newTaskRef.current.value = null;
+    newTaskRef.current.value = null;
   };
 
   const handleUpdateTask = (id, task) => {
@@ -45,10 +41,6 @@ export const App = function App() {
   const handleResetList = () => {
     const newTodos = todos.filter((todo) => !todo.completed);
     setTodos(newTodos);
-  };
-
-  const setNewtest = () => {
-    setTest(newTaskRef.current.value);
   };
 
   return (
@@ -79,8 +71,6 @@ export const App = function App() {
           <input
             type="text"
             placeholder="Write new task"
-            value={test}
-            onChange={() => setNewtest()}
             name="addtask"
             id="addtask"
             ref={newTaskRef}

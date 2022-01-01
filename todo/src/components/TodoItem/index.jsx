@@ -38,11 +38,10 @@ export const TodoItem = function TodoItem({
         checked={completed}
         onChange={handleToggleTodoCheckClick}
       />
-      {/* <p className={completed && 'completed'}>{task}</p> */}
       <input
         ref={updateTaskRef}
-      // placeholder={task}
         type="text"
+        className={completed ? 'task__input task__input--completed' : 'task__input'}
         name={task}
         value={newTask}
         onChange={() => handleNewtask()}
