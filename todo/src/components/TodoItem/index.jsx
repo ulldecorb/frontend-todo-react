@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import '../../style/todoItem.css';
 
@@ -6,6 +6,8 @@ export const TodoItem = function TodoItem({
   todo, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask
 }) {
   const { id, task, completed } = todo;
+
+  const [newTask, setNewtask] = useState(task);
 
   const updateTaskRef = useRef();
 
@@ -22,6 +24,10 @@ export const TodoItem = function TodoItem({
     handleDeleteTask(id);
   };
 
+  const handleNewtask = () => {
+    setNewtask(updateTaskRef.current.value);
+  };
+
   return (
     <li className="task">
       <input
@@ -32,8 +38,15 @@ export const TodoItem = function TodoItem({
         checked={completed}
         onChange={handleToggleTodoCheckClick}
       />
-      <p className={completed && 'completed'}>{task}</p>
-      <input ref={updateTaskRef} placeholder={task} type="text" name={task} />
+      {/* <p className={completed && 'completed'}>{task}</p> */}
+      <input
+        ref={updateTaskRef}
+      // placeholder={task}
+        type="text"
+        name={task}
+        value={newTask}
+        onChange={() => handleNewtask()}
+      />
       <button
         type="button"
         className="task__update-button"
@@ -56,7 +69,7 @@ TodoItem.propTypes = {
   // todo: PropTypes.objectOf(PropTypes.object).isRequired,
   todo: PropTypes.shape({
     task: PropTypes.string,
-    id: PropTypes.number,
+    id: PropTypes.string,
     completed: PropTypes.bool
   }).isRequired,
   handleDeleteTask: PropTypes.PropTypes.func.isRequired,

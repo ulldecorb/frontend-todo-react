@@ -32,8 +32,9 @@
     }
 
     input[type="text"] {
-        display: none;
-        opacity: 0
+        // display: none;
+        // opacity: 0
+        width: 40%;
     }
 
     button {
@@ -47,14 +48,15 @@
         }
     }
 
-    p {
-       color: rgb(92, 92, 92);
-       cursor: pointer;
-       width: 80%;
-    }
+    // p {
+    //    color: rgb(92, 92, 92);
+    //    cursor: pointer;
+    //    width: 40%;
+    // }
 
     &__update-button {
-        display: none;
+        background-color: green;
+        width: 10%;
     }
     &__delete-button {
         background-color: red;
