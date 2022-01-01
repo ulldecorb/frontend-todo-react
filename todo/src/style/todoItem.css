@@ -1,7 +1,3 @@
-.completed {
-  text-decoration: line-through;
-}
-
 .task:nth-child(odd) {
   background-color: #e1e9da;
 }
@@ -23,10 +19,6 @@
           align-items: center;
 }
 
-.task input {
-  color: yellowgreen;
-}
-
 .task__checkbox {
   margin: 0 1vw;
   cursor: pointer;
@@ -37,12 +29,31 @@
   outline: 0.4vw solid yellow;
 }
 
-.task input[type="text"] {
+.task__input {
   width: 40%;
+  height: 5vh;
+  color: #1f1f1f;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+.task__input:focus {
+  background-color: pink;
+}
+
+.task__input:focus .task {
+  display: block;
+}
+
+.task__input--completed {
+  text-decoration: line-through;
 }
 
 .task button {
   color: #FFF;
+  font-size: 1rem;
   border-radius: 1vh;
   margin: 0 1vw;
   cursor: pointer;
