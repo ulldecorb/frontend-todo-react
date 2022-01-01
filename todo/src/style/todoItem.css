@@ -38,8 +38,7 @@
 }
 
 .task input[type="text"] {
-  display: none;
-  opacity: 0;
+  width: 40%;
 }
 
 .task button {
@@ -53,14 +52,9 @@
   outline: 0.4vw solid yellow;
 }
 
-.task p {
-  color: #5c5c5c;
-  cursor: pointer;
-  width: 80%;
-}
-
 .task__update-button {
-  display: none;
+  background-color: green;
+  width: 10%;
 }
 
 .task__delete-button {
