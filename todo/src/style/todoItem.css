@@ -30,13 +30,14 @@
 }
 
 .task__input {
-  width: 40%;
+  width: 85%;
   height: 5vh;
   color: #1f1f1f;
   font-size: 1rem;
   outline: none;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .task__input:focus {
@@ -44,7 +45,7 @@
 }
 
 .task__input:focus .task {
-  display: block;
+  display: none;
 }
 
 .task__input--completed {
@@ -55,21 +56,33 @@
   color: #FFF;
   font-size: 1rem;
   border-radius: 1vh;
-  margin: 0 1vw;
+  margin: 0 0.3vw;
   cursor: pointer;
-}
-
-.task button:hover {
-  outline: 0.4vw solid yellow;
 }
 
 .task__update-button {
   background-color: green;
-  width: 10%;
+  width: 5%;
+  height: 4vh;
+  visibility: hidden;
+}
+
+.task__update-button:hover {
+  outline: 0.4vw solid green;
 }
 
 .task__delete-button {
   background-color: red;
-  width: 10%;
+  width: 5%;
+  height: 4vh;
+  visibility: hidden;
+}
+
+.task__delete-button:hover {
+  outline: 0.4vw solid red;
+}
+
+.task:hover .task__update-button, .task:hover .task__delete-button {
+  visibility: visible;
 }
 /*# sourceMappingURL=todoItem.css.map */

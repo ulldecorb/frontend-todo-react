@@ -51,14 +51,14 @@ export const TodoItem = function TodoItem({
         className="task__update-button"
         onClick={() => handleUpdateTaskClick()}
       >
-        UPDATE
+        🖋
       </button>
       <button
         type="button"
         className="task__delete-button"
         onClick={() => handleDeleteTaskClick()}
       >
-        Delete
+        🗑
       </button>
     </li>
   );
