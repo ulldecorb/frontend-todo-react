@@ -6,4 +6,17 @@ span {
     color: red;
     text-align: center;
     width: 100%;
+    margin: 0 2vw;
+}
+
+button {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    border-radius: 1vh;
+    margin: 0 1vw;
+    cursor: pointer;
+
+    &:hover {
+        outline: 0.4vw solid rgb(36, 36, 36);
+    }
 }
