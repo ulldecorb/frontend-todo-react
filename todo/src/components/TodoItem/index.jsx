@@ -49,6 +49,7 @@ export const TodoItem = function TodoItem({
       <button
         type="button"
         className="task__update-button"
+        data-testid="updateTaskButton"
         onClick={() => handleUpdateTaskClick()}
       >
         🖋
@@ -56,6 +57,7 @@ export const TodoItem = function TodoItem({
       <button
         type="button"
         className="task__delete-button"
+        data-testid="deleteSingleTaskButton"
         onClick={() => handleDeleteTaskClick()}
       >
         🗑
@@ -65,7 +67,6 @@ export const TodoItem = function TodoItem({
 };
 
 TodoItem.propTypes = {
-  // todo: PropTypes.objectOf(PropTypes.object).isRequired,
   todo: PropTypes.shape({
     task: PropTypes.string,
     id: PropTypes.string,

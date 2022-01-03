@@ -19,7 +19,7 @@ describe('When component renders', () => {
       handleUpdateTask={mockHandler}
       handleToggleTodoCheck={mockHandler}
     />);
-    const button = component.getByText(/delete/i);
+    const button = component.getByTestId(/deleteSingleTaskButton/i);
     fireEvent.click(button);
     expect(mockHandler).toHaveBeenCalledTimes(1);
   });
@@ -32,7 +32,7 @@ describe('When component renders', () => {
       handleUpdateTask={mockHandler}
       handleToggleTodoCheck={mockHandler}
     />);
-    const button = component.getByText(/update/i);
+    const button = component.getByTestId(/updateTaskButton/i);
     fireEvent.click(button);
     expect(mockHandler).toHaveBeenCalledTimes(1);
   });

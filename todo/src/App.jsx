@@ -21,12 +21,14 @@ export const App = function App() {
   };
 
   const handleCreateNewTask = () => {
-    const newId = randomNewId();
-    const newTask = newTaskRef.current.value;
-    const newTodo = { id: newId, task: newTask, completed: false };
-    const newTodos = [...todos, newTodo];
-    setTodos(newTodos);
-    newTaskRef.current.value = null;
+    if (newTaskRef.current.value !== '') {
+      const newId = randomNewId();
+      const newTask = newTaskRef.current.value;
+      const newTodo = { id: newId, task: newTask, completed: false };
+      const newTodos = [...todos, newTodo];
+      setTodos(newTodos);
+      newTaskRef.current.value = null;
+    }
   };
 
   const handleUpdateTask = (id, task) => {
