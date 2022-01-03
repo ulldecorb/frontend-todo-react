@@ -22,4 +22,10 @@ describe('When app component render', () => {
     fireEvent.click(addTaskHandle);
     expect(mockHandler).toHaveBeenCalledTimes(1);
   });
+  test('Empty list must display /good job/ text', () => {
+    // const todos = [];
+    // const mockHandler = jest.fn();
+    const component = render(<App />);
+    expect(component.container).toHaveTextContent(/Job!/i);
+  });
 });
