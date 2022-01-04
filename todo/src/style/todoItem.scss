@@ -11,32 +11,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin:0 -1.3vw;
 
     &__checkbox {
         margin: 0 1vw;
         cursor: pointer;
         width: 10%;
-
-        &:hover {
-            outline: 0.4vw solid yellow;
-        }
     }
 
     &__input {
-        width: 85%;
+        width: 80%;
         height: 5vh;
         color: rgb(31, 31, 31);
-        font-size: 1rem;
+        // font-size: 1rem;
+        padding: 0 0.8vw;
         outline: none;
         background-color: transparent;
         border: none;
         cursor: pointer;
 
         &:focus {
-            .task {
-                display: none;
-            }
-            background-color: pink;
+            background-color: #FFF;
         }
 
         &--completed {
@@ -46,7 +41,7 @@
 
     button {
         color: #FFF;
-        font-size: 1rem;
+        // font-size: 1rem;
         border-radius: 1vh;
         margin: 0 0.3vw;
         cursor: pointer;
@@ -59,7 +54,7 @@
         visibility: hidden;
 
         &:hover {
-            outline: 0.4vw solid green;
+            outline: 0.3vw solid green;
         }
     }
 
@@ -70,7 +65,7 @@
         visibility: hidden;
 
         &:hover {
-            outline: 0.4vw solid red;
+            outline: 0.3vw solid red;
         }
     }
 
@@ -78,5 +73,12 @@
         .task__update-button, .task__delete-button {
             visibility: visible;
         }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .task__input {
+        font-size : 1rem;
+        // background-color: red;
     }
 }

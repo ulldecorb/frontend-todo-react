@@ -1,23 +1,17 @@
 .list__box {
-  background-color: red;
-}
-
-span {
-  color: red;
-  text-align: center;
-  width: 100%;
-  margin: 0 2vw;
-}
-
-button {
-  color: black;
-  font-size: 1rem;
-  border-radius: 1vh;
-  margin: 0 1vw;
-  cursor: pointer;
-}
-
-button:hover {
-  outline: 0.4vw solid #242424;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 /*# sourceMappingURL=todoList.css.map */

@@ -56,13 +56,13 @@ export const App = function App() {
       />
       <section className="list__controls">
         <div className="controls__info">
-
           <span>
             { todos.filter((todo) => !todo.completed).length > 0
               ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
               : 'God Job!'}
           </span>
           <button
+            className="info__delete-completed-button"
             type="button"
             onClick={() => handleResetList()}
           >
