@@ -17,6 +17,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 -1.3vw;
 }
 
 .task__checkbox {
@@ -25,15 +26,11 @@
   width: 10%;
 }
 
-.task__checkbox:hover {
-  outline: 0.4vw solid yellow;
-}
-
 .task__input {
-  width: 85%;
+  width: 80%;
   height: 5vh;
   color: #1f1f1f;
-  font-size: 1rem;
+  padding: 0 0.8vw;
   outline: none;
   background-color: transparent;
   border: none;
@@ -41,11 +38,7 @@
 }
 
 .task__input:focus {
-  background-color: pink;
-}
-
-.task__input:focus .task {
-  display: none;
+  background-color: #FFF;
 }
 
 .task__input--completed {
@@ -54,7 +47,6 @@
 
 .task button {
   color: #FFF;
-  font-size: 1rem;
   border-radius: 1vh;
   margin: 0 0.3vw;
   cursor: pointer;
@@ -68,7 +60,7 @@
 }
 
 .task__update-button:hover {
-  outline: 0.4vw solid green;
+  outline: 0.3vw solid green;
 }
 
 .task__delete-button {
@@ -79,10 +71,16 @@
 }
 
 .task__delete-button:hover {
-  outline: 0.4vw solid red;
+  outline: 0.3vw solid red;
 }
 
 .task:hover .task__update-button, .task:hover .task__delete-button {
   visibility: visible;
+}
+
+@media screen and (max-width: 480px) {
+  .task__input {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=todoItem.css.map */

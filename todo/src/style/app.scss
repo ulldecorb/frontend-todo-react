@@ -5,9 +5,9 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     display:flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
     background-color: rgb(221, 221, 221);
     // background-image: 
     // repeating-linear-gradient(90deg, transparent, transparent 50px,
@@ -26,7 +26,8 @@ body {
 
 .list {
     width: 60vw;
-    height: 100vh;
+    min-height: 80vh;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -36,7 +37,7 @@ body {
     &__title {
         color: rgb(255, 255, 255);
         font-family: 'Pushster', cursive;
-        font-size: 3em;
+        font-size: 3rem;
         text-align: center;
         letter-spacing: 1.2vw;
         text-shadow: 0 0 10px rgb(173, 173, 173);
@@ -44,6 +45,7 @@ body {
 
     &__controls {
         width: 60vw;
+        margin-bottom: 2vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -59,8 +61,11 @@ body {
             .add-task-box {
                                 
                 &__input {
-                    color: red;  /* color for user input */
+                    color: red;
                     width: 60%;
+                    border: none;
+                    border-radius: 2vh;
+                    padding: 0.8vh 0.8vw;
                     &::placeholder {
                         color: rgb(172, 172, 172);
                     }
@@ -74,6 +79,11 @@ body {
                     color: #FFF;
                     background-color: rgb(172, 172, 172);
                     border-radius: 1vh;
+                    margin: 0 1vw;
+
+                    &:hover {
+                        outline:0.3vw solid rgb(136, 136, 136)
+                    }
                 }
             }
         }
@@ -81,6 +91,31 @@ body {
         .controls__info {
             width: 100%;
             text-align: center;
+
+            
+            .info__delete-completed-button {
+                color: rgb(0, 0, 0);
+                // font-size: 1rem;
+                border-radius: 1vh;
+                margin: 0 1vw;
+                cursor: pointer;
+
+                &:hover {
+                    outline: 0.4vw solid rgb(36, 36, 36);
+                }
+            }
         }
     }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size : 1rem;
+        background-color: red;
+    }
+    .add-task-box__input {
+        font-size: 2rem;
+    }
+
+
 }
