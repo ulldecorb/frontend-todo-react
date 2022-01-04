@@ -138,10 +138,24 @@ body {
 @media screen and (max-width: 480px) {
   body {
     font-size: 1rem;
-    background-color: red;
+  }
+  .list {
+    width: 96vw;
+  }
+  .list__title {
+    font-size: 1.8rem;
+  }
+  .controls__add-task-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .add-task-box__input {
-    font-size: 2rem;
+    width: 100vw;
+    font-size: 1rem;
+    outline: 2px solid red;
+    margin-bottom: 1vh;
   }
 }
 /*# sourceMappingURL=app.css.map */
