@@ -66,7 +66,7 @@ export const App = function App() {
             type="button"
             onClick={() => handleResetList()}
           >
-            RESET
+            REMOVE COMPLETED
           </button>
         </div>
         <div className="controls__add-task-box">

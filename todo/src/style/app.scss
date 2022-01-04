@@ -38,6 +38,7 @@ body {
         color: rgb(255, 255, 255);
         font-family: 'Pushster', cursive;
         font-size: 3rem;
+        margin: 1vh 0;
         text-align: center;
         letter-spacing: 1.2vw;
         text-shadow: 0 0 10px rgb(173, 173, 173);
@@ -81,6 +82,7 @@ body {
                     background-color: rgb(172, 172, 172);
                     border-radius: 1vh;
                     margin: 0 1vw;
+                    cursor: pointer;
 
                     &:hover {
                         outline:0.3vw solid rgb(136, 136, 136)
@@ -95,7 +97,8 @@ body {
 
             
             .info__delete-completed-button {
-                color: rgb(0, 0, 0);
+                color: #FFF;
+                background-color: rgb(172, 172, 172);
                 // font-size: 1rem;
                 border-radius: 1vh;
                 margin: 0 1vw;
@@ -120,14 +123,13 @@ body {
         font-size: 1.8rem;;
     }
     .controls__add-task-box {
-        flex-direction: column;
+        flex-direction: column; 
     }
     .add-task-box__input {
-        width: 100vw;
-        font-size: 1rem;
-        outline: 2px solid red;
+        width: 420px;
+        font-size: 0.8rem;
+        padding: 0.8vh 0.8vw;
+        // outline: 2px solid red;
         margin-bottom: 1vh;
     }
-
-
 }
