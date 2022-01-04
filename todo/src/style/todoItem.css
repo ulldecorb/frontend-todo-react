@@ -17,7 +17,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 -1.3vw;
+  margin: 0;
+  padding: 0;
 }
 
 .task__checkbox {
@@ -54,8 +55,8 @@
 
 .task__update-button {
   background-color: green;
-  width: 5%;
-  height: 4vh;
+  width: 5vmin;
+  height: 4vmin;
   visibility: hidden;
 }
 
@@ -65,8 +66,8 @@
 
 .task__delete-button {
   background-color: red;
-  width: 5%;
-  height: 4vh;
+  width: 5vmin;
+  height: 4vmin;
   visibility: hidden;
 }
 
@@ -81,6 +82,9 @@
 @media screen and (max-width: 480px) {
   .task__input {
     font-size: 0.8rem;
+  }
+  .task__update-button {
+    font-size: 0.5rem;
   }
 }
 /*# sourceMappingURL=todoItem.css.map */
