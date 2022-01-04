@@ -1,8 +1,7 @@
 
-# Todo Fullstack
+# Todo
 
-## Current
-This fullstack project is a TODO list with complete CRUD on React as Frontend framework.
+This frontend project is a TODO list with complete CRUD on React as framework.
 	
 ## Technologies applyed
 Project is created with:
@@ -22,7 +21,10 @@ $ npm start
 ## Project Status
 ### Features
 * Render List
-* Add CRUD
+* CRUD
+* Responsive style
+* Unit Test
+
 ### Todo
-* Add style
-<!-- * Connect Client to Sever -->
+* Add backend api with node.js
+* E2E test with cypres
