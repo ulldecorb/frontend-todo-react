@@ -17,6 +17,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #dddddd;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
 }
 
 .list {
@@ -106,7 +107,7 @@ body {
 }
 
 .list__controls .controls__add-task-box .add-task-box__input:focus {
-  outline: 2px solid #888888;
+  outline: 2px solid #b4b4b4;
 }
 
 .list__controls .controls__add-task-box .add-task-box__handle-add-button {
@@ -118,7 +119,7 @@ body {
 }
 
 .list__controls .controls__add-task-box .add-task-box__handle-add-button:hover {
-  outline: 0.3vw solid #888888;
+  outline: 0.3vw solid #b4b4b4;
 }
 
 .list__controls .controls__info {
@@ -135,10 +136,10 @@ body {
 }
 
 .list__controls .controls__info .info__delete-completed-button:hover {
-  outline: 0.4vw solid #242424;
+  outline: 0.3vw solid #888888;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   body {
     font-size: 1rem;
   }

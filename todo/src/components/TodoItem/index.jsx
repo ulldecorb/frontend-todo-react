@@ -52,7 +52,7 @@ export const TodoItem = function TodoItem({
         data-testid="updateTaskButton"
         onClick={() => handleUpdateTaskClick()}
       >
-        🖋
+        <i className="fas fa-pencil-alt" />
       </button>
       <button
         type="button"
@@ -60,7 +60,7 @@ export const TodoItem = function TodoItem({
         data-testid="deleteSingleTaskButton"
         onClick={() => handleDeleteTaskClick()}
       >
-        🗑
+        <i className="fas fa-trash-alt" />
       </button>
     </li>
   );

@@ -54,37 +54,40 @@
 }
 
 .task__update-button {
-  background-color: green;
+  background-color: #049104;
   width: 5vmin;
   height: 4vmin;
   visibility: hidden;
 }
 
 .task__update-button:hover {
-  outline: 0.3vw solid green;
+  outline: 0.2vw solid #23ad23;
 }
 
 .task__delete-button {
-  background-color: red;
+  background-color: #ff0202;
   width: 5vmin;
   height: 4vmin;
   visibility: hidden;
 }
 
 .task__delete-button:hover {
-  outline: 0.3vw solid red;
+  outline: 0.2 vw solid #fd5454;
 }
 
 .task:hover .task__update-button, .task:hover .task__delete-button {
   visibility: visible;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .task__input {
     font-size: 0.8rem;
   }
   .task__update-button {
     font-size: 0.5rem;
+  }
+  .fa-pencil-alt, .fa-trash-alt {
+    display: none;
   }
 }
 /*# sourceMappingURL=todoItem.css.map */
