@@ -66,7 +66,7 @@ export const App = function App() {
             type="button"
             onClick={() => handleResetList()}
           >
-            REMOVE COMPLETED
+            <i className="fas fa-backspace" />
           </button>
         </div>
         <div className="controls__add-task-box">
