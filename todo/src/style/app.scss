@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(184, 189, 180);
     background-image: 
     repeating-linear-gradient(90deg, transparent, transparent 50px,
         rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px,
@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(243, 248, 238);
     border-radius: 2vw;
 
     &__title {
@@ -39,6 +39,7 @@ body {
         font-size: 3rem;
         margin: 1vh 0;
         text-align: center;
+        height: 7vh;
         letter-spacing: 1.2vw;
         text-shadow: 0 0 10px rgb(173, 173, 173);
     }
@@ -63,6 +64,7 @@ body {
                 &__input {
                     color: red;
                     width: 60%;
+                    height: 3vh;
                     border: none;
                     border-radius: 2vh;
                     padding: 0.8vh 0.8vw;
@@ -76,14 +78,24 @@ body {
                 }
                 
                 &__handle-add-button {
-                    color: #FFF;
-                    background-color: rgb(172, 172, 172);
-                    border-radius: 1vh;
+                    color: rgb(94, 94, 94);
+                    width: 3vh;
+                    height: 3vh;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     margin: 0 1vw;
+                    border: none;
                     cursor: pointer;
 
                     &:hover {
-                        outline:0.3vw solid rgb(180, 180, 180)
+                        // outline:0.3vw solid rgb(180, 180, 180);
+                        // color: rgb(37, 209, 129);
+                        color: #FFF;
+                        box-shadow: 0 0 8px rgb(94, 94, 94);
+                        background-color: rgb(94, 94, 94);
+
                     }
                 }
             }
@@ -95,11 +107,15 @@ body {
 
             
             .info__delete-completed-button {
-                color: #FFF;
-                background-color: rgb(172, 172, 172);
+                // color: #FFF;
+                // background-color: rgb(172, 172, 172);
                 border-radius: 1vh;
                 margin: 0 1vw;
+                border: none;
                 cursor: pointer;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
 
                 &:hover {
                     outline: 0.3vw solid rgb(136, 136, 136);

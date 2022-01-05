@@ -15,10 +15,10 @@ export const TodoItem = function TodoItem({
     handleToggleTodoCheck(id);
   };
 
-  const handleUpdateTaskClick = () => {
-    handleUpdateTask(id, updateTaskRef.current.value);
-    updateTaskRef.current.value = null;
-  };
+  // const handleUpdateTaskClick = () => {
+  //   handleUpdateTask(id, updateTaskRef.current.value);
+  //   updateTaskRef.current.value = null;
+  // };
 
   const handleDeleteTaskClick = () => {
     handleDeleteTask(id);
@@ -26,6 +26,8 @@ export const TodoItem = function TodoItem({
 
   const handleNewtask = () => {
     setNewtask(updateTaskRef.current.value);
+    handleUpdateTask(id, updateTaskRef.current.value);
+    updateTaskRef.current.value = null;
   };
 
   return (
@@ -46,14 +48,14 @@ export const TodoItem = function TodoItem({
         value={newTask}
         onChange={() => handleNewtask()}
       />
-      <button
+      {/* <button
         type="button"
         className="task__update-button"
         data-testid="updateTaskButton"
         onClick={() => handleUpdateTaskClick()}
       >
         <i className="fas fa-pencil-alt" />
-      </button>
+      </button> */}
       <button
         type="button"
         className="task__delete-button"

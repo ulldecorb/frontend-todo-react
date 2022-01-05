@@ -16,7 +16,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #dddddd;
+  background-color: #b8bdb4;
   background-image: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
 }
 
@@ -36,7 +36,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #eeeeee;
+  background-color: #f3f8ee;
   border-radius: 2vw;
 }
 
@@ -46,6 +46,7 @@ body {
   font-size: 3rem;
   margin: 1vh 0;
   text-align: center;
+  height: 7vh;
   letter-spacing: 1.2vw;
   text-shadow: 0 0 10px #adadad;
 }
@@ -85,6 +86,7 @@ body {
 .list__controls .controls__add-task-box .add-task-box__input {
   color: red;
   width: 60%;
+  height: 3vh;
   border: none;
   border-radius: 2vh;
   padding: 0.8vh 0.8vw;
@@ -111,15 +113,29 @@ body {
 }
 
 .list__controls .controls__add-task-box .add-task-box__handle-add-button {
-  color: #FFF;
-  background-color: #acacac;
-  border-radius: 1vh;
+  color: #5e5e5e;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 1vw;
+  border: none;
   cursor: pointer;
 }
 
 .list__controls .controls__add-task-box .add-task-box__handle-add-button:hover {
-  outline: 0.3vw solid #b4b4b4;
+  color: #FFF;
+  -webkit-box-shadow: 0 0 8px #5e5e5e;
+          box-shadow: 0 0 8px #5e5e5e;
+  background-color: #5e5e5e;
 }
 
 .list__controls .controls__info {
@@ -128,10 +144,9 @@ body {
 }
 
 .list__controls .controls__info .info__delete-completed-button {
-  color: #FFF;
-  background-color: #acacac;
   border-radius: 1vh;
   margin: 0 1vw;
+  border: none;
   cursor: pointer;
 }
 
