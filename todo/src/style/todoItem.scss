@@ -7,6 +7,7 @@
 }
 
 .task {
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -24,7 +25,6 @@
         width: 80%;
         height: 5vh;
         color: rgb(31, 31, 31);
-        // font-size: 1rem;
         padding: 0 0.8vw;
         outline: none;
         background-color: transparent;
@@ -32,37 +32,27 @@
         cursor: pointer;
 
         &:focus {
-            background-color: #FFF;
+            background-color: rgb(221, 221, 221);
         }
 
         &--completed {
             text-decoration: line-through;
-        }
-    }
-
-    button {
-        color: #FFF;
-        border-radius: 1vh;
-        margin: 0 0.3vw;
-        cursor: pointer;
-    }
-
-    &__update-button {
-        background-color: rgb(4, 145, 4);
-        width: 5vmin;
-        height: 4vmin;
-        visibility: hidden;
-
-        &:hover {
-            outline: 0.2vw solid rgb(35, 173, 35);
+            color: #FFF;
         }
     }
 
     &__delete-button {
-        background-color: rgb(255, 2, 2);
+        border-radius: 1vh;
+        margin: 0 1vw;
+        border: none;
         width: 5vmin;
         height: 4vmin;
         visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: rgb(145, 145, 145);
 
         &:hover {
             outline: 0.2 vw solid rgb(253, 84, 84);
@@ -82,8 +72,5 @@
     }
     .task__update-button {
         font-size: 0.5rem;
-    }
-    .fa-pencil-alt, .fa-trash-alt {
-        display: none;
     }
 }

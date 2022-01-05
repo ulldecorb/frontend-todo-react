@@ -66,7 +66,7 @@ export const App = function App() {
             type="button"
             onClick={() => handleResetList()}
           >
-            <i className="fas fa-backspace" />
+            <i className="fas fa-backspace fa-lg" />
           </button>
         </div>
         <div className="controls__add-task-box">
@@ -84,7 +84,7 @@ export const App = function App() {
             onClick={() => handleCreateNewTask()}
             className="add-task-box__handle-add-button"
           >
-            ADD TASK
+            <i className="fas fa-plus-circle fa-2x" />
           </button>
         </div>
       </section>
