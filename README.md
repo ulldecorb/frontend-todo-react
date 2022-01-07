@@ -40,5 +40,14 @@ In addition to the following websites for documentation:
 	W3schools [https://www.w3schools.com/]
 * TEST:  
 	Jest [https://jestjs.io/]  
-	Testing Library [https://testing-library.com/]
-## Other information
+	Testing Library [https://testing-library.com/]  
+	
+<!-- ## Other information
+Contruir de nou el todo que no havia contruit encara i que els tempos lectius no em permetien aprofundir al nivell d'acabat desitjat.
+Una mica a les braves. TDD descartat
+REACT a voluntat
+SOLID principis
+SASS organitzat. A traves de BEM es poden aplicar modificadors facilment.
+UI i UX madurs. Descartar el botó de update per un onchange.
+Test unitari persegint el 100%, encara que sigui poc efectiu en una planificació de projecte seriosa (pero important en una planificació de marketing). -->
+
