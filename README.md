@@ -36,13 +36,13 @@ For this project I have mainly combined the most interesting tips and practices 
 
 In addition to the following websites for documentation:
 * HTML, CSS, Javascript:  
-	MDN Web Docs [https://developer.mozilla.org]  
-	W3schools [https://www.w3schools.com/]
+	[MDN Web Docs](https://developer.mozilla.org)  
+	[W3schools](https://www.w3schools.com/)
 * REACT:
-	React [https://reactjs.org/]
+	[React](https://reactjs.org/)
 * TEST:  
-	[Jest] (https://jestjs.io/)  
-	Testing Library [https://testing-library.com/]  
+	[Jest](https://jestjs.io/)  
+	[Testing Library](https://testing-library.com/)  
 	
 <!-- ## Other information
 Contruir de nou el todo que no havia contruit encara i que els tempos lectius no em permetien aprofundir al nivell d'acabat desitjat.
