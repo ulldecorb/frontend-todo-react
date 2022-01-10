@@ -39,9 +39,9 @@ In addition to the following websites for documentation:
 	MDN Web Docs [https://developer.mozilla.org]  
 	W3schools [https://www.w3schools.com/]
 * REACT:
-	!React [https://reactjs.org/]
+	React [https://reactjs.org/]
 * TEST:  
-	Jest [https://jestjs.io/]  
+	[Jest] (https://jestjs.io/)  
 	Testing Library [https://testing-library.com/]  
 	
 <!-- ## Other information
