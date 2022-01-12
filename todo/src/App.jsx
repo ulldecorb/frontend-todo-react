@@ -56,18 +56,25 @@ export const App = function App() {
       />
       <section className="list__controls">
         <div className="controls__info">
-          <span>
-            { todos.filter((todo) => !todo.completed).length > 0
-              ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
-              : 'God Job!'}
-          </span>
-          <button
-            className="info__delete-completed-button"
-            type="button"
-            onClick={() => handleResetList()}
-          >
-            <i className="fas fa-backspace fa-lg" />
-          </button>
+          { todos.length === 0
+            ? 'Start your list!'
+            : (
+              <>
+                <span>
+                  { todos.filter((todo) => !todo.completed).length > 0
+                    ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
+                    : 'Good Job!'}
+                </span>
+                <button
+                  className="info__delete-completed-button"
+                  type="button"
+                  data-testid="deleteCompletedButton"
+                  onClick={() => handleResetList()}
+                >
+                  <i className="fas fa-backspace fa-lg" />
+                </button>
+              </>
+            )}
         </div>
         <div className="controls__add-task-box">
           <input
@@ -83,6 +90,7 @@ export const App = function App() {
             type="button"
             onClick={() => handleCreateNewTask()}
             className="add-task-box__handle-add-button"
+            data-testid="addButton"
           >
             <i className="fas fa-plus-circle fa-2x" />
           </button>

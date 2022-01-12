@@ -22,11 +22,7 @@ export const TodoList = function TodoList({
 };
 
 TodoList.propTypes = {
-  todos: PropTypes.shape([{
-    task: PropTypes.string,
-    id: PropTypes.string,
-    completed: PropTypes.bool
-  }]).isRequired,
+  todos: PropTypes.shape([]).isRequired,
   handleDeleteTask: PropTypes.func.isRequired,
   handleToggleTodoCheck: PropTypes.func.isRequired,
   handleUpdateTask: PropTypes.func.isRequired
