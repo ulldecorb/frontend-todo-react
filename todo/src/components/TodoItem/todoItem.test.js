@@ -14,7 +14,7 @@ describe('When component renders', () => {
       handleUpdateTask={mockHandler}
       handleToggleTodoCheck={mockHandler}
     />);
-    const button = component.getByTestId('deleteSingleTaskButton');
+    const button = component.getByTestId('deleteTaskButton');
     fireEvent.click(button);
     expect(mockHandler).toHaveBeenCalledTimes(1);
   });

@@ -47,7 +47,7 @@ export const TodoItem = function TodoItem({
       <button
         type="button"
         className="task__delete-button"
-        data-testid="deleteSingleTaskButton"
+        data-testid="deleteTaskButton"
         onClick={() => handleDeleteTaskClick()}
       >
         <i className="fas fa-trash-alt" />
