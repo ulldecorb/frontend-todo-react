@@ -18,7 +18,7 @@ describe('when todolist component render', () => {
   // });
 
   test('List must display text', () => {
-    const mockTodos = [{ id: 1, task: 'test', completed: false }];
+    const mockTodos = [{ id: '1', task: 'test', completed: false }];
     const mockHandler = jest.fn();
     const component = render(<TodoList
       todos={mockTodos}
@@ -26,6 +26,7 @@ describe('when todolist component render', () => {
       handleUpdateTask={mockHandler}
       handleToggleTodoCheck={mockHandler}
     />);
-    expect(component.container).toHaveTextContent(/test/i);
+    const input = component.getByTestId('taskInput').value;
+    expect(input).toBe('test');
   });
 });

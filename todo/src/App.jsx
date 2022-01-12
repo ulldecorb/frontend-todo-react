@@ -72,7 +72,7 @@ export const App = function App() {
         <div className="controls__add-task-box">
           <input
             type="text"
-            placeholder="Write new task"
+            placeholder="Add new task"
             name="addtask"
             id="addtask"
             ref={newTaskRef}

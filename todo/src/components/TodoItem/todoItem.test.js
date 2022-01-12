@@ -5,40 +5,35 @@ import { fireEvent, render } from '@testing-library/react';
 import { TodoItem } from './index';
 
 describe('When component renders', () => {
-  test('Component must be render', () => {
-    const mockTodo = { id: 1, task: 'complete test', completed: false };
-    const component = render(<TodoItem todo={mockTodo} />);
-    expect(component.container).toHaveTextContent(/update/i);
+  test('delete button calls onClick prop when clicked', () => {
+    const mockHandler = jest.fn();
+    const mockTodo = { id: '1', task: 'complete test', completed: false };
+    const component = render(<TodoItem
+      todo={mockTodo}
+      handleDeleteTask={mockHandler}
+      handleUpdateTask={mockHandler}
+      handleToggleTodoCheck={mockHandler}
+    />);
+    const button = component.getByTestId('deleteSingleTaskButton');
+    fireEvent.click(button);
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   });
   test('Click the delete button calls event handler once', () => {
     const mockHandler = jest.fn();
-    const mockTodo = { id: 1, task: 'complete test', completed: false };
+    const mockTodo = { id: '1', task: 'complete test', completed: false };
     const component = render(<TodoItem
       todo={mockTodo}
       handleDeleteTask={mockHandler}
       handleUpdateTask={mockHandler}
       handleToggleTodoCheck={mockHandler}
     />);
-    const button = component.getByTestId(/deleteSingleTaskButton/i);
-    fireEvent.click(button);
+    const input = component.getByTestId('taskInput');
+    fireEvent.change(input, { target: { value: 'new value' } });
     expect(mockHandler).toHaveBeenCalledTimes(1);
   });
-  test('Click the update button calls event handler once', () => {
+  test('click the checkbox calls event handler once', () => {
     const mockHandler = jest.fn();
-    const mockTodo = { id: 1, task: 'complete test', completed: false };
-    const component = render(<TodoItem
-      todo={mockTodo}
-      handleDeleteTask={mockHandler}
-      handleUpdateTask={mockHandler}
-      handleToggleTodoCheck={mockHandler}
-    />);
-    const button = component.getByTestId(/updateTaskButton/i);
-    fireEvent.click(button);
-    expect(mockHandler).toHaveBeenCalledTimes(1);
-  });
-  test('Click the checkbox calls event handler once', () => {
-    const mockHandler = jest.fn();
-    const mockTodo = { id: 1, task: 'complete test', completed: false };
+    const mockTodo = { id: '1', task: 'complete test', completed: false };
     const component = render(<TodoItem
       todo={mockTodo}
       handleDeleteTask={mockHandler}
