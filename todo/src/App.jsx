@@ -57,10 +57,10 @@ export const App = function App() {
       <section className="list__controls">
         <div className="controls__info">
           { todos.length === 0
-            ? 'Start your list!'
+            ? <span className="info__text">Start your list!</span>
             : (
               <>
-                <span>
+                <span className="info__text">
                   { todos.filter((todo) => !todo.completed).length > 0
                     ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
                     : 'Good Job!'}
@@ -71,7 +71,7 @@ export const App = function App() {
                   data-testid="deleteCompletedButton"
                   onClick={() => handleResetList()}
                 >
-                  <i className="fas fa-backspace fa-lg" />
+                  <i className="fas fa-trash-alt fa-lg" />
                 </button>
               </>
             )}
@@ -85,6 +85,7 @@ export const App = function App() {
             ref={newTaskRef}
             className="add-task-box__input"
             autoComplete="off"
+            maxLength="35"
           />
           <button
             type="button"

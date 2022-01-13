@@ -16,7 +16,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #b8bdb4;
+  background-color: #f3f8ee;
   background-image: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
 }
 
@@ -48,7 +48,7 @@ body {
   text-align: center;
   height: 7vh;
   letter-spacing: 1.2vw;
-  text-shadow: 0 0 10px #adadad;
+  text-shadow: 0 0 10px #b4b4b4;
 }
 
 .list__controls {
@@ -84,7 +84,7 @@ body {
 }
 
 .list__controls .controls__add-task-box .add-task-box__input {
-  color: red;
+  color: #1f1f1f;
   width: 60%;
   height: 3vh;
   border: none;
@@ -93,19 +93,19 @@ body {
 }
 
 .list__controls .controls__add-task-box .add-task-box__input::-webkit-input-placeholder {
-  color: #acacac;
+  color: #b4b4b4;
 }
 
 .list__controls .controls__add-task-box .add-task-box__input:-ms-input-placeholder {
-  color: #acacac;
+  color: #b4b4b4;
 }
 
 .list__controls .controls__add-task-box .add-task-box__input::-ms-input-placeholder {
-  color: #acacac;
+  color: #b4b4b4;
 }
 
 .list__controls .controls__add-task-box .add-task-box__input::placeholder {
-  color: #acacac;
+  color: #b4b4b4;
 }
 
 .list__controls .controls__add-task-box .add-task-box__input:focus {
@@ -132,7 +132,7 @@ body {
 }
 
 .list__controls .controls__add-task-box .add-task-box__handle-add-button:hover {
-  color: #FFF;
+  color: white;
   -webkit-box-shadow: 0 0 8px #5e5e5e;
           box-shadow: 0 0 8px #5e5e5e;
   background-color: #5e5e5e;
@@ -143,6 +143,10 @@ body {
   text-align: center;
 }
 
+.list__controls .controls__info .info__text {
+  font-weight: 400;
+}
+
 .list__controls .controls__info .info__delete-completed-button {
   border-radius: 1vh;
   margin: 0 1vw;
@@ -151,7 +155,7 @@ body {
 }
 
 .list__controls .controls__info .info__delete-completed-button:hover {
-  outline: 0.3vw solid #888888;
+  color: #fd5454;
 }
 
 @media screen and (max-width: 640px) {
