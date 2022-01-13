@@ -1,14 +1,12 @@
 @import './color';
+@import './mixins';
 
 body {
     margin: 0;
     height: 100vh;
     width: 100vw;
     font-family: 'Roboto Condensed', sans-serif;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
     background-color: $background-color;
     background-image: 
     repeating-linear-gradient(90deg, transparent, transparent 50px,
@@ -28,10 +26,7 @@ body {
 .list {
     width: 60vw;
     min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex(column, flex-start, center);
     background-color: $background-color;
     border-radius: 2vw;
 
@@ -49,17 +44,12 @@ body {
     &__controls {
         width: 60vw;
         margin-bottom: 2vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, center);
 
         .controls__add-task-box {
             margin-top: 1.5vh;            
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(row, center, center);
             
             .add-task-box {
                                 
@@ -84,9 +74,7 @@ body {
                     width: 3vh;
                     height: 3vh;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex(row, center, center);
                     margin: 0 1vw;
                     border: none;
                     cursor: pointer;
