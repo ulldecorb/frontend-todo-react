@@ -4,6 +4,10 @@ import '@testing-library/jest-dom/extend-expect';
 import { fireEvent, render } from '@testing-library/react';
 import { App } from './App';
 
+// beforeEach(() => {
+//   const component = render(<App />);
+//   return component;
+// });
 describe('when app component render', () => {
   test('component is render', () => {
     const component = render(<App />);
@@ -55,7 +59,7 @@ describe('when app component render', () => {
     fireEvent.click(deleteButton);
     expect(component.container).toHaveTextContent(/start/i);
   });
-  test('onchange task must change task value', () => {
+  test('update task must change task value', () => {
     const component = render(<App />);
     const addInput = component.getByPlaceholderText('Add new task');
     const addButton = component.getByTestId('addButton');

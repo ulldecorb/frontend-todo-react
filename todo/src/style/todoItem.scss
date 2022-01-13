@@ -1,10 +1,4 @@
-.task:nth-child(odd) {
-    background-color: rgb(225, 233, 218);
-}
-
-.task:nth-child(even) {
-    background-color: rgb(184, 189, 180);
-}
+@import './color';
 
 .task {
     height: 50px;
@@ -15,6 +9,14 @@
     margin:0;
     padding:0;
 
+    &:nth-child(odd) {
+        background-color: $odd-background-list-color;
+    }
+
+    &:nth-child(even) {
+        background-color: $even-background-list-color;
+    }
+
     &__checkbox {
         margin: 0 1vw;
         cursor: pointer;
@@ -24,7 +26,7 @@
     &__input {
         width: 80%;
         height: 5vh;
-        color: rgb(31, 31, 31);
+        color: $dark-text;
         padding: 0 0.8vw;
         outline: none;
         background-color: transparent;
@@ -32,12 +34,12 @@
         cursor: pointer;
 
         &:focus {
-            background-color: rgb(221, 221, 221);
+            background-color: $background-dark-text-focus;
         }
 
         &--completed {
             text-decoration: line-through;
-            color: #FFF;
+            color: $light-text;
         }
     }
 
@@ -52,15 +54,16 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        color: rgb(145, 145, 145);
+        color: $light-icon-color;
 
         &:hover {
-            outline: 0.2 vw solid rgb(253, 84, 84);
+            color: $delete-icon-color-hover;
+            box-shadow: 0 0 8px $delete-icon-color-hover;
         }
     }
 
     &:hover {
-        .task__update-button, .task__delete-button {
+        .task__delete-button {
             visibility: visible;
         }
     }
