@@ -22,7 +22,9 @@ export const TodoList = function TodoList({
 };
 
 TodoList.propTypes = {
-  todos: PropTypes.shape([]).isRequired,
+  todos: PropTypes.arrayOf(
+    PropTypes.object
+  ).isRequired,
   handleDeleteTask: PropTypes.func.isRequired,
   handleToggleTodoCheck: PropTypes.func.isRequired,
   handleUpdateTask: PropTypes.func.isRequired
