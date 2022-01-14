@@ -1,12 +1,24 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { v4 as randomNewId } from 'uuid';
 import { TodoList } from './components/TodoList';
-import List from './constants/List';
 import './style/app.css';
 
+const KEY = 'todoApp.list';
+
 export const App = function App() {
-  const [todos, setTodos] = useState([...List]);
+  const [todos, setTodos] = useState([]);
   const newTaskRef = useRef();
+
+  useEffect(() => {
+    const storedList = JSON.parse(localStorage.getItem(KEY));
+    if (storedList) {
+      setTodos(storedList);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(KEY, JSON.stringify(todos));
+  }, [todos]);
 
   const handleToggleTodoCheck = (id) => {
     const newTodos = [...todos];
@@ -28,6 +40,12 @@ export const App = function App() {
       const newTodos = [...todos, newTodo];
       setTodos(newTodos);
       newTaskRef.current.value = null;
+    }
+  };
+
+  const handleEnterTask = (event) => {
+    if (event.key === 'Enter') {
+      handleCreateNewTask();
     }
   };
 
@@ -83,6 +101,7 @@ export const App = function App() {
             name="addtask"
             id="addtask"
             ref={newTaskRef}
+            onKeyPress={handleEnterTask}
             className="add-task-box__input"
             autoComplete="off"
             maxLength="35"
