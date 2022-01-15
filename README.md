@@ -68,4 +68,3 @@ SOLID principis
 SASS organitzat. Amb colors i mixins ben organitzats en fitxers independents. A traves de BEM es poden aplicar modificadors facilment.
 UI i UX madurs. Descartar el botó de update per un onchange.
 Test unitari persegint el 100% de cobertura, encara que sigui poc efectiu en una planificació de projecte seriosa (pero important en una planificació de negoci). -->
-
