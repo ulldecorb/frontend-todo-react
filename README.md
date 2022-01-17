@@ -37,10 +37,10 @@ $ cd todo/coverage/Icov-report/index.html
 * CRUD
 * Responsive style
 * Unit Test
-
+<!-- 
 ### Todo
 * Add backend api with node.js
-* E2E test with cypres
+* E2E test with cypres -->
 
 ## Sources
 For this project I have mainly combined the most interesting tips and practices I have received from two different sources:   
