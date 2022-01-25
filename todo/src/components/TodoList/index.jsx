@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TodoItem } from '../TodoItem';
-import '../../style/todoList.css';
+import './todoList.css';
 
 export const TodoList = function TodoList({
   todos, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask

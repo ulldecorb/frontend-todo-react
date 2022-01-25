@@ -1,24 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { v4 as randomNewId } from 'uuid';
 import { TodoList } from './components/TodoList';
 import './style/app.css';
 
-const KEY = 'todoApp.list';
-
 export const App = function App() {
   const [todos, setTodos] = useState([]);
   const newTaskRef = useRef();
-
-  useEffect(() => {
-    const storedList = JSON.parse(localStorage.getItem(KEY));
-    if (storedList) {
-      setTodos(storedList);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(KEY, JSON.stringify(todos));
-  }, [todos]);
 
   const handleToggleTodoCheck = (id) => {
     const newTodos = [...todos];
@@ -50,12 +37,10 @@ export const App = function App() {
   };
 
   const handleUpdateTask = (id, task) => {
-    if (task !== '') {
-      const newTodos = [...todos];
-      const newTodo = newTodos.find((todo) => todo.id === id);
-      newTodo.task = task;
-      setTodos(newTodos);
-    }
+    const newTodos = [...todos];
+    const newTodo = newTodos.find((todo) => todo.id === id);
+    newTodo.task = task;
+    setTodos(newTodos);
   };
 
   const handleResetList = () => {

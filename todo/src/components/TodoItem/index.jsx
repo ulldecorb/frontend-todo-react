@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
-import '../../style/todoItem.css';
+import './todoItem.css';
 
 export const TodoItem = function TodoItem({
   todo, handleDeleteTask, handleToggleTodoCheck, handleUpdateTask
