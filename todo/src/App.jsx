@@ -48,6 +48,13 @@ export const App = function App() {
     setTodos(newTodos);
   };
 
+  const infoMessage = () => {
+    if (todos.filter((todo) => !todo.completed).length > 0) {
+      return `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`;
+    }
+    return 'Good Job!';
+  };
+
   return (
     <section className="list">
       <h1 className="list__title">TODO LIST</h1>
@@ -64,9 +71,7 @@ export const App = function App() {
             : (
               <>
                 <span className="info__text">
-                  { todos.filter((todo) => !todo.completed).length > 0
-                    ? `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`
-                    : 'Good Job!'}
+                  { infoMessage() }
                 </span>
                 <button
                   className="info__delete-completed-button"
