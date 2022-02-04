@@ -64,9 +64,9 @@ Aquesta app es una demo per asentar conceptes generals de React, SASS i BEM. Una
 
 Un exemple net de com funcionen les props, desde els components pares als fills, i com el events afecten al store en direcció oposada, desde els fills cap als pares.
 He pogut jugar amb els hooks useState, useEffect, useRef. També he pogut definir les proptypes adecuadament a traves de la comprensió de la documentació.
-Com el plantjament de la app era Una mica a les braves. TDD descartat
+Com el plantjament de la app era Una mica a les braves. TDD descartat.
 REACT a voluntat
 SOLID principis
 SASS organitzat. Amb colors i mixins ben organitzats en fitxers independents. A traves de BEM es poden aplicar modificadors facilment.
 UI i UX madurs. Descartar el botó de update per un onchange.
-Test unitari persegint el 100% de cobertura, encara que sigui poc efectiu en una planificació de projecte seriosa (pero important en una planificació de negoci). -->
+Test unitari persegint el 100% de cobertura, encara que sigui poc efectiu en una planificació de projecte serios (pero important en una planificació de negoci). -->
