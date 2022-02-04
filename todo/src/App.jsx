@@ -52,7 +52,6 @@ export const App = function App() {
     if (todos.filter((todo) => !todo.completed).length > 0) {
       return `There are ${todos.filter((todo) => !todo.completed).length} tasks to do`;
     }
-
     return 'Good Job!';
   };
 
